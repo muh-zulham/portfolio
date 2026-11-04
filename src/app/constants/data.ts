@@ -15,8 +15,8 @@ export const ABOUT_ME = {
     "When I'm not coding, I'm usually exploring how small details — motion, spacing, loading states — can make or break a user's first impression. I care about clean code and clean UI equally, and I'm always looking for projects where I can ship something real, not just a demo.",
     "I'm currently open to freelance work and remote opportunities where I can help startups or small teams build their web presence from scratch or improve what they already have.",
   ],
-  profileImage: "/muhzulham.png",
-  profileGif: "/muhzulham.png",
+  profileImage: "/muhzulham.webp",
+  profileGif: "/muhzulham.webp",
 };
 
 export const USER_NAMES = {
