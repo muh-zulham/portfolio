@@ -10,13 +10,13 @@ import { ABOUT_ME } from "@/app/constants/data";
 // =============================================
 // CUSTOM HOOKS
 // =============================================
-const useISTTime = () => {
+const useWIBTime = () => {
   const [currentTime, setCurrentTime] = useState("");
 
   useEffect(() => {
     const updateTime = () => {
       const timeString = new Date().toLocaleTimeString("en-IN", {
-        timeZone: "Asia/Kolkata",
+        timeZone: "Asia/Jakarta", // WIB
         hour12: false,
         hour: "2-digit",
         minute: "2-digit",
@@ -37,7 +37,7 @@ const useISTTime = () => {
 // MAIN COMPONENT
 // =============================================
 const Profile = () => {
-  const currentTime = useISTTime();
+  const currentTime = useWIBTime();
   const [isHovering, setIsHovering] = useState<boolean>(false);
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
@@ -107,7 +107,7 @@ const Profile = () => {
             <FaLocationCrosshairs className="w-4 h-4" />
             <span className="font-mono">{ABOUT_ME.location}</span>
           </div>
-          <div className="font-mono">{currentTime} IST</div>
+          <div className="font-mono">{currentTime} WIB</div>
         </div>
       </div>
     </section>
