@@ -6,6 +6,7 @@ import { USER_NAMES } from "@/app/constants/data";
 import { SiGooglemeet } from "react-icons/si";
 
 export default function Meeting() {
+  if (!USER_NAMES.calUsername) return null;
   useEffect(() => {
     (async function () {
       const cal = await getCalApi();

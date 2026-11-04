@@ -80,7 +80,7 @@ interface Project {
   description: string;
   tech: string[];
   link?: string;
-  github: string;
+  github?: string;
   images?: {
     hero?: string;
     gallery?: ProjectImage[];
@@ -143,15 +143,17 @@ const ProjectHeader = ({ project }: { project: Project }) => {
             </Link>
           )}
 
-          <Link
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className=" btn px-4 py-2 flex items-center gap-2"
-          >
-            <Github className="w-4 h-4" />
-            Source Code
-          </Link>
+          {project.github && (
+            <Link
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" btn px-4 py-2 flex items-center gap-2"
+            >
+              <Github className="w-4 h-4" />
+              Source Code
+            </Link>
+          )}
         </div>
 
         {/* Tech Stack */}

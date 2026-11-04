@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Education() {
+  if (EDUCATION.length === 0) return null;
   return (
     <section id="education">
       <div className="flex items-center py-2 px-4 border-b border-dashed border-border">

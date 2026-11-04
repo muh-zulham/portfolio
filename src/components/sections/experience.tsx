@@ -8,6 +8,7 @@ import { ArrowUpRight } from "lucide-react";
 import CollapsibleGrid from "@/components/ui/collapsible-grid";
 
 export default function Experience() {
+  if (EXPERIENCE.length === 0) return null;
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (

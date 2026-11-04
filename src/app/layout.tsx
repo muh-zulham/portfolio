@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import SmoothScroll from "@/components/ui/smooth-scroll";
 import ScrollToTop from "@/components/ui/scroll-to-top";
@@ -159,7 +159,6 @@ export default function RootLayout({
                   SOCIAL_LINKS.linkedin,
                   SOCIAL_LINKS.twitter,
                   SOCIAL_LINKS.instagram,
-                  SOCIAL_LINKS.peerlist,
                 ],
               },
               {

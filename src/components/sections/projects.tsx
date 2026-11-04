@@ -78,15 +78,17 @@ export default function Projects() {
                       <ExternalLink className="w-4 h-4" />
                     </Link>
                   )}
-                  <Link
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn py-2 px-2.5"
-                    aria-label={`View ${project.name} source code on GitHub`}
-                  >
-                    <Github className="w-4 h-4" />
-                  </Link>
+                  {project.github && (
+                    <Link
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn py-2 px-2.5"
+                      aria-label={`View ${project.name} source code on GitHub`}
+                    >
+                      <Github className="w-4 h-4" />
+                    </Link>
+                  )}
                 </div>
               </div>
             }
