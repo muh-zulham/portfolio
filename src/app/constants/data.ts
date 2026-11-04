@@ -56,7 +56,18 @@ export const SKILLS = [
   "vercel",
 ];
 
-export const EXPERIENCE = [
+export interface Experience {
+  company: string;
+  companyLink?: string;
+  logo?: string;
+  role: string;
+  period: string;
+  location: string;
+  description: string;
+  skills: string[];
+}
+
+export const EXPERIENCE: Experience[] = [
   {
     company: "Self-employed",
     companyLink: "",
@@ -70,7 +81,15 @@ export const EXPERIENCE = [
   },
 ];
 
-export const EDUCATION = [
+export interface Education {
+  degree: string;
+  institution: string;
+  institutionLink?: string;
+  period: string;
+  score: string;
+}
+
+export const EDUCATION: Education[] = [
   {
     degree: "Sistem Komputer",
     institution: "Universitas Sumatera Utara",
@@ -80,4 +99,10 @@ export const EDUCATION = [
   },
 ];
 
-export const TESTIMONIALS = [];
+export interface Testimonial {
+  name: string;
+  role: string;
+  content: string;
+}
+
+export const TESTIMONIALS: Testimonial[] = [];
