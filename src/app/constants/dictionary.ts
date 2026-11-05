@@ -6,7 +6,7 @@ export const dictionary = {
       contact: "contact",
     },
     profile: {
-      available: "Available for work",
+      available: "available for work",
     },
     sections: {
       about: "about me.",
@@ -18,23 +18,23 @@ export const dictionary = {
     },
     contact: {
       sendMessage: "send a message.",
-      dropMessage: "Drop a message below to discuss projects or just say hi.",
-      name: "Your name",
+      dropMessage: "drop a message below to discuss projects or just say hi.",
+      name: "your name",
       email: "your.email@example.com",
-      message: "What would you like to discuss?",
-      send: "Send Message",
-      sending: "Sending...",
+      message: "what would you like to discuss?",
+      send: "send Message",
+      sending: "sending...",
       meeting: "schedule a meeting.",
-      bookCall: "Book a 30-minute call on Google Meet.",
+      bookCall: "book a 30-minute call on Google Meet.",
       discoveryCall: "30-minute discovery call.",
-      discussGoals: "Let's discuss your project goals.",
+      discussGoals: "let's discuss your project goals.",
       followConnect: "follow & connect.",
-      stayUpdated: "Stay updated with my latest thoughts.",
+      stayUpdated: "stay updated with my latest thoughts.",
     },
     footer: {
-      rights: "All rights reserved.",
-      scrolling: "Still scrolling?",
-      checkGithub: "Check out my work on GitHub",
+      rights: "all rights reserved.",
+      scrolling: "still scrolling?",
+      checkGithub: "check out my work on GitHub",
     }
   },
   id: {
@@ -44,7 +44,7 @@ export const dictionary = {
       contact: "kontak",
     },
     profile: {
-      available: "Tersedia untuk proyek",
+      available: "tersedia untuk proyek",
     },
     sections: {
       about: "tentang saya.",
@@ -56,23 +56,23 @@ export const dictionary = {
     },
     contact: {
       sendMessage: "kirim pesan.",
-      dropMessage: "Tinggalkan pesan di bawah untuk diskusi proyek atau sekadar menyapa.",
-      name: "Nama Anda",
+      dropMessage: "tinggalkan pesan di bawah untuk diskusi proyek atau sekadar menyapa.",
+      name: "nama Anda",
       email: "email.anda@contoh.com",
-      message: "Apa yang ingin Anda diskusikan?",
-      send: "Kirim Pesan",
-      sending: "Mengirim...",
+      message: "apa yang ingin Anda diskusikan?",
+      send: "kirim Pesan",
+      sending: "mengirim...",
       meeting: "jadwalkan pertemuan.",
-      bookCall: "Pesan panggilan 30 menit di Google Meet.",
+      bookCall: "pesan panggilan 30 menit di Google Meet.",
       discoveryCall: "panggilan penemuan 30 menit.",
-      discussGoals: "Mari diskusikan tujuan proyek Anda.",
+      discussGoals: "mari diskusikan tujuan proyek Anda.",
       followConnect: "ikuti & terhubung.",
-      stayUpdated: "Dapatkan update terbaru dari saya.",
+      stayUpdated: "dapatkan update terbaru dari saya.",
     },
     footer: {
-      rights: "Hak cipta dilindungi undang-undang.",
-      scrolling: "Masih scroll?",
-      checkGithub: "Lihat karya saya di GitHub",
+      rights: "hak cipta dilindungi undang-undang.",
+      scrolling: "masih scroll?",
+      checkGithub: "lihat karya saya di GitHub",
     }
   }
 };

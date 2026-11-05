@@ -76,7 +76,7 @@ export default function Navbar() {
             className="text-sm font-mono px-2 py-1 rounded-md border border-border hover:bg-muted transition-colors"
             aria-label="Toggle Language"
           >
-            {language === "en" ? "EN" : "ID"}
+            {language === "en" ? "en" : "id"}
           </button>
           <ThemeToggle />
         </div>
