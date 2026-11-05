@@ -22,6 +22,7 @@ const Skills = () => (
               width={32}
               height={32}
               decoding="async"
+              className="transition-all duration-300 md:grayscale md:hover:grayscale-0"
             />
           </button>
         ))}
