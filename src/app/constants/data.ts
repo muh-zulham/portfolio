@@ -101,7 +101,7 @@ export const EXPERIENCE: Experience[] = [
       "Implemented an automated 'Auto-Purge' system (Cron jobs), ensuring strict data privacy and security by instantly deleting user files post-processing.",
       "Currently driving product strategy, exploring monetization models and optimizing infrastructure costs (Cloudflare/Vercel) for maximum profit margins."
     ],
-    skills: ["Python", "System Architecture", "Product Strategy", "FastAPI"],
+    skills: ["Python", "FastAPI", "Next.js", "System Architecture", "Cloudflare", "Vercel", "Cron Jobs"],
   },
   {
     company: "Freelance",
@@ -129,7 +129,7 @@ export const EXPERIENCE: Experience[] = [
       "Developed automated reporting tools (VBA/Excel Macros), reducing manual data processing time significantly per week.",
       "Collaborated with cross-functional teams to ensure data integrity and accuracy for strategic decision-making."
     ],
-    skills: ["Data Analysis", "VBA", "Reporting", "Data Integrity"],
+    skills: ["Data Analysis", "Marketing Analytics", "VBA Macros", "Reporting", "Data Auditing"],
   },
   {
     company: "PT Bank Rakyat Indonesia (Persero) Tbk",
