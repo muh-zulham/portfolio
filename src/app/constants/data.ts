@@ -22,7 +22,7 @@ export const ABOUT_ME = {
 export const USER_NAMES = {
   githubUsername: "muh-zulham",
   linkedinUsername: "muhzulham",
-  twitterUsername: "muhzulham",
+  twitterUsername: "zulhamjourney",
   peerlistUsername: "",
   instagramUsername: "zulhamjourney",
   calUsername: "",
@@ -138,24 +138,6 @@ export const EXPERIENCE: Experience[] = [
     ],
     skills: ["IT Infrastructure Management", "Network Security", "Banking Systems"],
   }
-];
-
-export interface Education {
-  degree: string;
-  institution: string;
-  institutionLink?: string;
-  period: string;
-  score: string;
-}
-
-export const EDUCATION: Education[] = [
-  {
-    degree: "Sistem Komputer",
-    institution: "Universitas Sumatera Utara",
-    institutionLink: "https://usu.ac.id",
-    period: "2015 - 2019",
-    score: "3.13",
-  },
 ];
 
 export interface Testimonial {

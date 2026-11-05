@@ -12,7 +12,6 @@ import {
   SOCIAL_LINKS,
   ABOUT_ME,
   USER_NAMES,
-  EDUCATION,
 } from "./constants/data";
 
 const bricolage = Bricolage_Grotesque({
@@ -139,11 +138,6 @@ export default function RootLayout({
                 jobTitle: ABOUT_ME.title,
                 description: `${ABOUT_ME.name} is a ${ABOUT_ME.title} specializing in modern web applications built with Next.js and TypeScript.`,
                 image: `${BASE_URL}${ABOUT_ME.profileImage}`,
-                alumniOf: EDUCATION.map((edu) => ({
-                  "@type": "CollegeOrUniversity",
-                  name: edu.institution,
-                  sameAs: edu.institutionLink,
-                })),
                 knowsAbout: [
                   "React",
                   "Next.js",
