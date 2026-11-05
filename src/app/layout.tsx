@@ -6,7 +6,6 @@ import { Analytics } from "@vercel/analytics/next";
 import SmoothScroll from "@/components/ui/smooth-scroll";
 import ScrollToTop from "@/components/ui/scroll-to-top";
 import GridPattern from "@/components/ui/grid-pattern";
-import CustomCursor from "@/components/ui/custom-cursor";
 import {
   BASE_URL,
   SOCIAL_LINKS,
@@ -176,7 +175,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <GridPattern />
-          <CustomCursor />
           <ScrollToTop />
           <SmoothScroll>{children}</SmoothScroll>
         </ThemeProvider>

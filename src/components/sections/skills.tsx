@@ -10,21 +10,25 @@ const Skills = () => (
     <div className="relative p-4">
       <div className="grid grid-cols-[repeat(auto-fit,minmax(40px,1fr))] gap-1">
         {SKILLS.map((skill) => (
-          <button
-            key={skill}
-            aria-label={skill}
-            title={skill}
-            className="w-10 h-10 rounded-full flex items-center justify-center"
-          >
-            <img
-              src={`https://skillicons.dev/icons?i=${skill}`}
-              alt={skill}
-              width={32}
-              height={32}
-              decoding="async"
-              className="transition-all duration-300 md:grayscale md:hover:grayscale-0"
-            />
-          </button>
+          <div key={skill} className="relative group flex items-center justify-center">
+            <button
+              aria-label={skill}
+              className="w-10 h-10 rounded-full flex items-center justify-center focus:outline-none"
+            >
+              <img
+                src={`https://skillicons.dev/icons?i=${skill}`}
+                alt={skill}
+                width={32}
+                height={32}
+                decoding="async"
+                className="transition-all duration-300 md:grayscale md:group-hover:grayscale-0"
+              />
+            </button>
+            {/* Tooltip */}
+            <span className="absolute -top-8 opacity-0 transition-opacity duration-75 rounded bg-foreground px-2 py-1 text-xs text-background group-hover:opacity-100 z-50 pointer-events-none capitalize whitespace-nowrap">
+              {skill}
+            </span>
+          </div>
         ))}
       </div>
     </div>

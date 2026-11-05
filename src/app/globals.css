@@ -128,7 +128,6 @@ html.lenis body {
     color: hsl(var(--foreground));
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: var(--radius);
-    cursor: pointer;
     font-weight: 500;
     display: inline-flex;
     align-items: center;
@@ -197,4 +196,27 @@ html.lenis body {
   ::view-transition-old(root) {
     z-index: 1;
   }
+}
+
+
+
+
+
+
+
+.custom-cursor.cursor-hover {
+  width: 3rem; /* 48px (membesar) */
+  height: 3rem;
+  margin-left: -1.5rem; /* -24px (biar tetep di tengah) */
+  margin-top: -1.5rem;
+  background-color: var(--foreground);
+}
+
+
+/* Fallback Kursor */
+body {
+  cursor: default !important;
+}
+a, button {
+  cursor: pointer !important;
 }
