@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SOCIAL_LINKS, ABOUT_ME } from "@/app/constants/data";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { FaXTwitter, FaInstagram } from "react-icons/fa6";
+import { FaXTwitter, FaThreads } from "react-icons/fa6";
 
 // =============================================
 // SOCIAL BUTTONS DATA
@@ -23,9 +23,9 @@ const SOCIAL_BUTTONS = [
     icon: <FaXTwitter className="w-5 h-5" />,
   },
   {
-    href: SOCIAL_LINKS.instagram,
-    label: "Instagram",
-    icon: <FaInstagram className="w-5 h-5" />,
+    href: SOCIAL_LINKS.threads,
+    label: "Threads",
+    icon: <FaThreads className="w-5 h-5" />,
   },
   {
     href: SOCIAL_LINKS.email,

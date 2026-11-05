@@ -8,7 +8,7 @@ import {
   Linkedin,
   ArrowRight,
 } from "lucide-react";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaThreads } from "react-icons/fa6";
 import { FaRegCommentDots } from "react-icons/fa";
 import { useState, ChangeEvent, FormEvent, ComponentType } from "react";
 import Meeting from "../ui/cal-meeting";
@@ -291,6 +291,17 @@ const Contact = () => {
                   title="Twitter"
                 >
                   <FaXTwitter className="w-5 h-5" />
+                </a>
+
+                {/* Threads */}
+                <a
+                  href={SOCIAL_LINKS.threads}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 btn flex items-center justify-center"
+                  title="Threads"
+                >
+                  <FaThreads className="w-5 h-5" />
                 </a>
               </div>
             </div>

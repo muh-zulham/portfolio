@@ -12,11 +12,6 @@ import CollapsibleGrid from "@/components/ui/collapsible-grid";
 export default function Projects() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const handleProjectClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    // Mark that user navigated from main page
-    sessionStorage.setItem("navigatedFromMainPage", "true");
-  };
 
   return (
     <section id="projects">
@@ -51,7 +46,7 @@ export default function Projects() {
                       <Link
                         href={`/projects/${generateSlug(project.name)}`}
                         className="link"
-                        onClick={handleProjectClick}
+                       
                       >
                         {project.name}
                         <MousePointerClick className="inline-block w-5 h-5 ml-1 align-text-bottom text-muted-foreground" />
