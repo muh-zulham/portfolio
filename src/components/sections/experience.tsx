@@ -1,6 +1,8 @@
 "use client";
 
 import { EXPERIENCE } from "@/app/constants/data";
+import { EXPERIENCE_ID } from "@/app/constants/data-id";
+import { useLanguage } from "@/components/providers/language-context";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,18 +11,20 @@ import CollapsibleGrid from "@/components/ui/collapsible-grid";
 
 export default function Experience() {
   if (EXPERIENCE.length === 0) return null;
+  const { language, t } = useLanguage();
+  const expData = language === "id" ? EXPERIENCE_ID : EXPERIENCE;
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
     <section id="experience">
       <div className="flex items-center py-2 px-4 border-b border-dashed border-border">
         <h2 className="text-2xl font-semibold flex items-center">
-          work experience.
+          {t.sections.experience}
         </h2>
       </div>
 
       <div className="relative divide-y divide-dashed divide-border">
-        {EXPERIENCE.map((exp, index) => (
+        {expData.map((exp, index) => (
           <CollapsibleGrid
             key={`${exp.role}-${exp.company}`}
             isExpanded={activeIndex === index}

@@ -13,6 +13,7 @@ import { FaRegCommentDots } from "react-icons/fa";
 import { useState, ChangeEvent, FormEvent, ComponentType } from "react";
 import Meeting from "../ui/cal-meeting";
 import { SOCIAL_LINKS, CONTACT_FORM_ENDPOINT } from "@/app/constants/data";
+import { useLanguage } from "@/components/providers/language-context";
 
 // =============================================
 // TYPE DEFINITIONS
@@ -153,6 +154,8 @@ const renderField = (
 // MAIN COMPONENT
 // =============================================
 const Contact = () => {
+  const { t } = useLanguage();
+
   const [formData, setFormData] = useState<FormData>(FORM_CONFIG.initialData);
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState<string>("");
@@ -181,9 +184,9 @@ const Contact = () => {
         <div className="lg:col-span-3">
           <div>
             <div className="p-4 border-b border-dashed border-border">
-              <h3 className="text-xl font-medium mb-1">send a message.</h3>
+              <h3 className="text-xl font-medium mb-1">{t.contact.sendMessage}</h3>
               <p className="text-sm text-muted-foreground">
-                Drop a message below to discuss projects or just say hi.
+                {t.contact.dropMessage}
               </p>
             </div>
 
@@ -204,7 +207,7 @@ const Contact = () => {
                     "Sending..."
                   ) : (
                     <>
-                      <span>Send Message</span>
+                      <span>{t.contact.send}</span>
                       <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                     </>
                   )}
@@ -230,15 +233,15 @@ const Contact = () => {
           {/* Meeting Scheduler */}
           <div className="flex flex-col items-start w-full">
             <div className="p-4 border-b border-dashed border-border w-full">
-              <h3 className="text-xl font-medium mb-1">schedule a meeting.</h3>
+              <h3 className="text-xl font-medium mb-1">{t.contact.meeting}</h3>
               <p className="text-sm text-muted-foreground">
-                Book a 30-minute call on Google Meet.
+                {t.contact.bookCall}
               </p>
             </div>
 
             <div className="p-4 border-b border-dashed border-border w-full">
               <h4 className="text-lg font-medium mb-1">
-                30-minute discovery call.
+                {t.contact.discoveryCall}
               </h4>
               <p className="text-sm text-muted-foreground">
                 Let&apos;s discuss your project goals.
@@ -252,9 +255,9 @@ const Contact = () => {
           {/* Social Media Links */}
           <div className="flex flex-col items-start w-full">
             <div className="p-4 border-b border-dashed border-border w-full">
-              <h3 className="text-xl font-medium mb-1">follow & connect.</h3>
+              <h3 className="text-xl font-medium mb-1">{t.contact.followConnect}</h3>
               <p className="text-sm text-muted-foreground">
-                Stay updated with my latest thoughts.
+                {t.contact.stayUpdated}
               </p>
             </div>
 

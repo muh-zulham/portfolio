@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { SOCIAL_LINKS, ABOUT_ME } from "@/app/constants/data";
+import { ABOUT_ME_ID } from "@/app/constants/data-id";
+import { useLanguage } from "@/components/providers/language-context";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { FaXTwitter, FaThreads } from "react-icons/fa6";
 
@@ -43,11 +47,14 @@ const SOCIAL_BUTTONS = [
 // MAIN COMPONENT
 // =============================================
 export default function AboutMe() {
+  const { language } = useLanguage();
+  const desc = language === "id" ? ABOUT_ME_ID.description : ABOUT_ME.description;
+
   return (
     <section id="about" className="divide-y divide-dashed divide-border">
       <div className="p-4">
         <div className="space-y-4 text-[15px] sm:text-base text-muted-foreground text-justify leading-relaxed">
-          {ABOUT_ME.description.map((paragraph, index) => (
+          {desc.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>

@@ -4,12 +4,14 @@ import { ExternalLink, Github, MousePointerClick } from "lucide-react";
 import Link from "next/link";
 import { PROJECTS } from "@/app/constants/data";
 import { useState } from "react";
+import { useLanguage } from "@/components/providers/language-context";
 import { generateSlug } from "@/lib/utils";
 import ImageTooltip from "@/components/ui/image-tooltip";
 import ImageMarquee from "@/components/ui/image-marquee";
 import CollapsibleGrid from "@/components/ui/collapsible-grid";
 
 export default function Projects() {
+  const { t } = useLanguage();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
 
@@ -17,7 +19,7 @@ export default function Projects() {
     <section id="projects">
       <div className="flex items-center py-2 px-4 border-b border-dashed border-border">
         <h2 className="text-2xl font-semibold flex items-center">
-          featured projects.
+          {t.sections.projects}
         </h2>
       </div>
 

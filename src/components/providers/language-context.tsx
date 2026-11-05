@@ -1,22 +1,22 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
+import { dictionary, Dictionary } from "@/app/constants/dictionary";
 
 type Language = "en" | "id";
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
+  t: Dictionary;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>("en");
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const saved = localStorage.getItem("language") as Language;
     if (saved === "en" || saved === "id") {
       setLanguageState(saved);
@@ -28,11 +28,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("language", lang);
   };
 
-  // Mencegah hydration mismatch
-  if (!mounted) return <>{children}</>;
+  // Mengambil kamus sesuai bahasa aktif
+  const t = dictionary[language];
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );

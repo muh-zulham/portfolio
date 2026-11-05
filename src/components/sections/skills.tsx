@@ -1,10 +1,16 @@
-import { SKILLS } from "@/app/constants/data";
+"use client";
 
-const Skills = () => (
+import { SKILLS } from "@/app/constants/data";
+import { useLanguage } from "@/components/providers/language-context";
+
+export default function Skills() {
+  const { t } = useLanguage();
+
+  return (
   <section id="skills">
     <div className="flex items-center py-2 px-4 border-b border-dashed border-border">
       <h2 className="text-2xl font-semibold flex items-center">
-        technical skills.
+        {t.sections.skills}
       </h2>
     </div>
     <div className="relative p-4">
@@ -33,6 +39,5 @@ const Skills = () => (
       </div>
     </div>
   </section>
-);
-
-export default Skills;
+  );
+}
