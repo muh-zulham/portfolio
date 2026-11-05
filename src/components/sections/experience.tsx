@@ -4,7 +4,7 @@ import { EXPERIENCE } from "@/app/constants/data";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 import CollapsibleGrid from "@/components/ui/collapsible-grid";
 
 export default function Experience() {
@@ -46,23 +46,33 @@ export default function Experience() {
                     {exp.role}
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    <Link
-                      href={exp.companyLink || "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      @ {exp.company}
-                      <ArrowUpRight className="inline-block w-4 h-4 ml-1 align-text-bottom text-muted-foreground" />
-                    </Link>
+                    {exp.companyLink ? (
+                      <Link
+                        href={exp.companyLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        @ {exp.company}
+                        <ArrowUpRight className="inline-block w-4 h-4 ml-1 align-text-bottom text-muted-foreground" />
+                      </Link>
+                    ) : (
+                      <span className="font-medium text-foreground/80">@ {exp.company}</span>
+                    )}
                   </p>
                 </div>
 
-                <div className="hidden sm:flex flex-col text-right font-mono text-sm text-muted-foreground">
+                <div className="hidden sm:flex flex-col text-right font-mono text-sm text-muted-foreground mr-2">
                   <span>{exp.period}</span>
                   <span>{exp.location}</span>
                 </div>
+                
+                <ChevronDown 
+                  className={`w-5 h-5 text-muted-foreground transition-transform duration-300 ${
+                    activeIndex === index ? "rotate-180" : ""
+                  }`} 
+                />
               </div>
             }
           >
@@ -75,9 +85,11 @@ export default function Experience() {
                 </span>
               </div>
 
-              <p className="text-sm text-muted-foreground text-justify leading-relaxed">
-                {exp.description}
-              </p>
+              <ul className="text-sm text-muted-foreground text-justify leading-relaxed list-disc list-inside space-y-1">
+                {exp.description.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
 
               <div className="flex flex-wrap gap-1.5">
                 {exp.skills.map((skill) => (

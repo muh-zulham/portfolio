@@ -63,7 +63,7 @@ export interface Experience {
   role: string;
   period: string;
   location: string;
-  description: string;
+  description: string[];
   skills: string[];
 }
 
@@ -72,13 +72,72 @@ export const EXPERIENCE: Experience[] = [
     company: "Self-employed",
     companyLink: "",
     logo: "",
-    role: "Frontend Developer",
-    period: "2024 - Present",
-    location: "Remote, Indonesia",
-    description:
-      "Built and shipped responsive web interfaces using Next.js, TypeScript, and Tailwind CSS. Focused on clean component architecture, performance optimization, and accessible UI patterns for client projects.",
-    skills: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    role: "Lead Product Developer (Digital Invitations & SaaS)",
+    period: "Jan 2026 - Present",
+    location: "Indonesia · Hybrid",
+    description: [
+      "Developed custom Digital Invitation platforms focusing on elegant user experience and lightweight performance.",
+      "Designed end-to-end digital solutions to help clients digitize their event and business needs.",
+      "Managed the entire product development lifecycle, from client requirement consultations and UI/UX design to deployment.",
+      "Optimized infrastructure scalability to ensure service stability with efficient operational costs."
+    ],
+    skills: ["Node.js", "React.js", "Product Management", "UI/UX", "SaaS"],
   },
+  {
+    company: "SikatPDF.com",
+    companyLink: "https://sikatpdf.com",
+    logo: "",
+    role: "Founder & Lead Product Engineer",
+    period: "Jan 2023 - Present",
+    location: "Indonesia · Hybrid",
+    description: [
+      "Successfully built and launched an MVP for a PDF solution featuring Merge, Split, and Compress tools.",
+      "Designed a Modular Component architecture to ensure a scalable and maintainable system.",
+      "Implemented an automated 'Auto-Purge' system to guarantee the security and privacy of user data.",
+      "Currently maintaining the system while exploring monetization models and further infrastructure optimization."
+    ],
+    skills: ["Python", "System Architecture", "Product Strategy", "Web Development"],
+  },
+  {
+    company: "Freelance",
+    companyLink: "",
+    logo: "",
+    role: "Lead Tech Strategist",
+    period: "Jan 2020 - Dec 2023",
+    location: "Jambi, Indonesia · Remote",
+    description: [
+      "Focused on research and development of Enterprise Resource Planning (ERP) systems and digital workflow automation for SMEs.",
+      "Explored the implementation of AI in the software development lifecycle to accelerate feature delivery.",
+      "Built database foundations for Premium features using manual injection techniques for A/B testing and market validation."
+    ],
+    skills: ["Product Research", "Artificial Intelligence (AI)", "ERP", "Database"],
+  },
+  {
+    company: "PT. SURYA MADISTRINDO",
+    companyLink: "https://suryamadistrindosmg.com/",
+    logo: "",
+    role: "Marketing Data Control Admin",
+    period: "Oct 2015 - Oct 2019",
+    location: "Medan, North Sumatra · On-site",
+    description: [
+      "Managed large-scale regional marketing data ecosystems to generate interactive and dynamic analytical reporting.",
+      "Conducted data input system audits to ensure information integrity and compliance with company standard procedures."
+    ],
+    skills: ["Data Analysis", "Analytic Reporting", "Data Entry", "Audit"],
+  },
+  {
+    company: "PT Bank Rakyat Indonesia (Persero) Tbk",
+    companyLink: "https://bri.co.id",
+    logo: "",
+    role: "IT eChannel",
+    period: "Aug 2012 - Aug 2015",
+    location: "Medan, North Sumatra · On-site",
+    description: [
+      "Responsible for High Availability of software and hardware for digital banking services.",
+      "Managed server security and network infrastructure (QoS/Bandwidth Allocation) within a strict banking security environment."
+    ],
+    skills: ["IT Infrastructure Management", "Network Security", "Banking Systems"],
+  }
 ];
 
 export interface Education {
