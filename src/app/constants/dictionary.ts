@@ -64,7 +64,7 @@ export const dictionary = {
       sending: "Mengirim...",
       meeting: "jadwalkan pertemuan.",
       bookCall: "Pesan panggilan 30 menit di Google Meet.",
-      discoveryCall: "Panggilan penemuan 30 menit.",
+      discoveryCall: "panggilan penemuan 30 menit.",
       discussGoals: "Mari diskusikan tujuan proyek Anda.",
       followConnect: "ikuti & terhubung.",
       stayUpdated: "Dapatkan update terbaru dari saya.",

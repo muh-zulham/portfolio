@@ -40,7 +40,7 @@ type SetStateFunction<T> = (value: T | ((prev: T) => T)) => void;
 // =============================================
 // FORM CONFIGURATION
 // =============================================
-const FORM_CONFIG = {
+const getFormConfig = (t: any) => ({
   endpoint: CONTACT_FORM_ENDPOINT,
   initialData: { name: "", email: "", message: "" } as FormData,
   fields: [
@@ -49,25 +49,25 @@ const FORM_CONFIG = {
       type: "text",
       label: "Name",
       icon: User,
-      placeholder: "Your name",
+      placeholder: t.contact.name,
     },
     {
       name: "email",
       type: "email",
       label: "Email",
       icon: Mail,
-      placeholder: "your.email@example.com",
+      placeholder: t.contact.email,
     },
     {
       name: "message",
       type: "textarea",
       label: "Message",
       icon: FaRegCommentDots,
-      placeholder: "What would you like to discuss?",
+      placeholder: t.contact.message,
       rows: 5,
     },
   ] as FormField[],
-};
+});
 
 // =============================================
 // HELPER FUNCTIONS
@@ -155,6 +155,7 @@ const renderField = (
 // =============================================
 const Contact = () => {
   const { t } = useLanguage();
+  const FORM_CONFIG = getFormConfig(t);
 
   const [formData, setFormData] = useState<FormData>(FORM_CONFIG.initialData);
   const [status, setStatus] = useState<FormStatus>("idle");
@@ -244,7 +245,7 @@ const Contact = () => {
                 {t.contact.discoveryCall}
               </h4>
               <p className="text-sm text-muted-foreground">
-                Let&apos;s discuss your project goals.
+                {t.contact.discussGoals}
               </p>
             </div>
             <div className="p-4 w-full">
