@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/components/providers/language-context";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import SmoothScroll from "@/components/ui/smooth-scroll";
@@ -168,6 +169,7 @@ export default function RootLayout({
         className={`${bricolage.className} antialiased`}
         suppressHydrationWarning
       >
+        <LanguageProvider>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -178,6 +180,7 @@ export default function RootLayout({
           <ScrollToTop />
           <SmoothScroll>{children}</SmoothScroll>
         </ThemeProvider>
+        </LanguageProvider>
         <Analytics />
       </body>
     </html>

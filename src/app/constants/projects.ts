@@ -1,4 +1,23 @@
-export const PROJECTS = [
+export interface Project {
+  name: string;
+  tagline: string;
+  overview: string;
+  description: string;
+  tech: string[];
+  link?: string;
+  github?: string;
+  images?: {
+    hero?: string;
+    gallery?: {
+      src: string;
+      alt: string;
+      caption?: string;
+    }[];
+  };
+  features?: string[];
+}
+
+export const PROJECTS: Project[] = [
     {
     name: "SikatPDF",
     tagline: "Online PDF toolkit that just works.",

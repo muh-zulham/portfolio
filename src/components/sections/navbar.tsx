@@ -2,6 +2,7 @@
 import Link from "next/link";
 import ThemeToggle from "../ui/theme-toggle";
 import { ABOUT_ME } from "@/app/constants/data";
+import { useLenis } from "lenis/react";
 
 const STAGGER = 30;
 
@@ -12,13 +13,18 @@ const navItems = [
 ];
 
 export default function Navbar() {
+  const lenis = useLenis();
   const handleScrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
     e.preventDefault();
-    const element = document.getElementById(href.substring(1));
-    if (element) element.scrollIntoView({ behavior: "instant" });
+    if (lenis) {
+      lenis.scrollTo(href, { offset: -20, duration: 1.5 });
+    } else {
+      const element = document.getElementById(href.substring(1));
+      if (element) element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
