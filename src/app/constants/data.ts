@@ -25,7 +25,7 @@ export const USER_NAMES = {
   twitterUsername: "zulhamjourney",
   peerlistUsername: "",
   instagramUsername: "zulhamjourney",
-  calUsername: "",
+  calUsername: "muhammad-zulham-uaj4fr",
 };
 
 export const SOCIAL_LINKS = {
