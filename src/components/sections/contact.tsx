@@ -73,6 +73,7 @@ const getFormConfig = (t: any) => ({
 // HELPER FUNCTIONS
 // =============================================
 const submitForm = async (
+  endpoint: string,
   formData: FormData,
   setStatus: SetStateFunction<FormStatus>,
   setErrorMessage: SetStateFunction<string>,
@@ -82,7 +83,7 @@ const submitForm = async (
   setErrorMessage("");
 
   try {
-    const response = await fetch(FORM_CONFIG.endpoint, {
+    const response = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -90,7 +91,7 @@ const submitForm = async (
 
     if (response.ok) {
       setStatus("success");
-      setFormData(FORM_CONFIG.initialData);
+      setFormData({ name: "", email: "", message: "" });
     } else {
       const errorData = await response.json();
       setErrorMessage(
@@ -169,7 +170,7 @@ const Contact = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    submitForm(formData, setStatus, setErrorMessage, setFormData);
+    submitForm(FORM_CONFIG.endpoint, formData, setStatus, setErrorMessage, setFormData);
   };
 
   return (

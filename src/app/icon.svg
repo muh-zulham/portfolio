@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 256 256"
+     role="img"
+     aria-label="Zulham icon">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --icon-color: #090909;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --icon-color: #f5f5f5; }
+    }
+    .icon { fill: var(--icon-color, currentColor); }
+  </style>
+  <path class="icon" d="M 228,22 L 223,18 L 210,13 L 40,13 L 39,14 L 33,15 L 25,20 L 20,25 L 16,32 L 15,38 L 14,39 L 14,49 L 19,62 L 30,72 L 38,75 L 128,75 L 129,76 L 22,183 L 17,190 L 14,199 L 14,210 L 15,211 L 16,217 L 20,224 L 25,229 L 31,233 L 33,233 L 36,235 L 40,235 L 41,236 L 54,235 L 64,230 L 231,63 L 232,60 L 234,58 L 236,52 L 237,41 L 236,40 L 235,33 L 232,27 Z M 203,173 L 202,174 L 198,174 L 190,177 L 180,186 L 175,196 L 174,207 L 175,208 L 175,213 L 178,220 L 187,230 L 197,235 L 209,236 L 221,232 L 231,223 L 236,213 L 237,202 L 236,201 L 236,197 L 233,189 L 224,179 L 219,176 L 213,174 Z"/>
+</svg>

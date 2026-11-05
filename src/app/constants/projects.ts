@@ -18,7 +18,34 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
-    {
+  {
+    name: "KatalogDealer",
+    tagline: "SaaS Multi-Tenant Platform for Automotive Dealers.",
+    overview:
+      "Architected a Single-Instance Multi-Tenant SaaS that transforms a simple bio-link into a high-converting digital catalog for automotive dealers, serving dynamic subdomains (dealer.katalogdealer.com).",
+    description:
+      "Engineered a dynamic domain routing system using Next.js 16 (App Router) and Middleware, seamlessly serving customized public sites, dealer dashboards, and landing pages from a single codebase. Integrated AI automation with Gemini API to auto-generate vehicle specs, and built a robust Lead Generation Ecosystem capturing leads into a PostgreSQL database.",
+    tech: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Python", "Cloudinary"],
+    link: "https://katalogdealer.com",
+    github: "https://github.com/muh-zulham/katalogdealer",
+    images: {
+      hero: "/placeholder-image.png",
+      gallery: [
+        {
+          src: "/placeholder-image.png",
+          alt: "KatalogDealer Dashboard",
+          caption: "Dealer dashboard with dynamic subdomains.",
+        },
+      ],
+    },
+    features: [
+      "Single-Instance Multi-Tenant SaaS Architecture",
+      "Dynamic domain routing via Middleware",
+      "AI Automation for vehicle specs (Gemini API)",
+      "Strict Data Isolation with Supabase RLS",
+    ],
+  },
+      {
     name: "SikatPDF",
     tagline: "Online PDF toolkit that just works.",
     overview:
