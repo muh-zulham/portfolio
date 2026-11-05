@@ -24,8 +24,8 @@ const Skills = () => (
                 className="transition-all duration-300 md:grayscale md:group-hover:grayscale-0"
               />
             </button>
-            {/* Tooltip */}
-            <span className="absolute -top-8 opacity-0 transition-opacity duration-75 rounded bg-foreground px-2 py-1 text-xs text-background group-hover:opacity-100 z-50 pointer-events-none capitalize whitespace-nowrap">
+            {/* Tooltip - Dark Glassmorphism */}
+            <span className="absolute -top-9 opacity-0 translate-y-2 transition-all duration-300 ease-out rounded-md bg-black/80 backdrop-blur-md border border-white/10 shadow-xl px-2.5 py-1 text-[11px] font-medium text-white/90 tracking-wide group-hover:opacity-100 group-hover:translate-y-0 z-50 pointer-events-none capitalize whitespace-nowrap">
               {skill}
             </span>
           </div>
